@@ -233,7 +233,7 @@ avg.addEventListener("click", () => {
         const averageViews = totalViews / videoIds.length;
         const average = document.createElement("h1")
         document.body.appendChild(average)
-        average.innerHTML = averageViews
+        average.innerHTML = Math.round(averageViews)
     };
 
     calculateAverageViews(last_arr);
