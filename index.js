@@ -160,7 +160,7 @@ let video = (arr) => {
             .then(data => {
                 const videoDuration = data.items[0].contentDetails.duration;
                 const durationInMilliseconds = parseYouTubeDurationToMilliseconds(videoDuration);
-                // console.log(data);
+                console.log(data);
                 // data.items[0].contentDetails.duration < "P59M" ||
                 if (durationInMilliseconds > 90000 && durationInMilliseconds < 3600000) {
                     // The duration is greater than 3 minutes and less than 1 hour
@@ -184,6 +184,7 @@ let video = (arr) => {
         let video_id = arr[J];
         fetchVideoData(video_id, J);
     }
+    console.log(last_arr);
 };
 
 // setTimeout(() => {
