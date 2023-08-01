@@ -69,6 +69,7 @@ let ids = async () => {
             return response.json();
         })
         .then(data => {
+            console.log(data)
             arr = []
             const today = new Date();
             // const cutoffDate = new Date("2023-06-14T11:18:56Z");
