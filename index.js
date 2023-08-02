@@ -72,11 +72,11 @@ let ids = async () => {
             console.log(data)
             arr = []
             const today = new Date();
-            const cutoffDate = new Date("2023-06-14T11:18:56Z");
+            // const cutoffDate = new Date("2023-06-14T11:18:56Z");
              console.log(data)
             for (var i = 0; i < data.items.length; i++) {
                 // arr.push(data.items[i].id.videoId)
-                if (data.items[i].snippet.publishedAt  >"2023-06-14T11:18:56z") {
+                if (data.items[i].snippet.publishedAt  >today.getFullYear() + "-" + 0 + today.getMonth() + "-" + today.getDay() + "T11:18:56Z") {
                     arr.push(data.items[i].id.videoId)
                 }
             }
