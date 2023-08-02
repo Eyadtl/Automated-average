@@ -76,7 +76,7 @@ let ids = async () => {
              console.log(data)
             for (var i = 0; i < data.items.length; i++) {
                 // arr.push(data.items[i].id.videoId)
-                if (data.items[i].snippet.publishedAt > today.getFullYear() + "-" + 0 + today.getMonth() + "-" + today.getDay()  /*>pdate.value*/ + "T11:18:56Z") {
+                if (data.items[i].snippet.publishedAt > "2023-07-01"/*today.getFullYear() + "-" + 0 + today.getMonth() + "-" + today.getDay()  /*>pdate.value*/ + "T11:18:56Z"*/) {
                     arr.push(data.items[i].id.videoId)
                 }
             }
