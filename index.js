@@ -73,14 +73,14 @@ let ids = async () => {
             arr = []
             const today = new Date();
             // const cutoffDate = new Date("2023-06-14T11:18:56Z");
-            // console.log(data)
+             console.log(data)
             for (var i = 0; i < data.items.length; i++) {
                 // arr.push(data.items[i].id.videoId)
                 if (data.items[i].snippet.publishedAt > today.getFullYear() + "-" + 0 + today.getMonth() + "-" + today.getDay()  /*>pdate.value*/ + "T11:18:56Z") {
                     arr.push(data.items[i].id.videoId)
                 }
             }
-            // console.log(arr)
+            console.log(arr)
             return arr;
         });
 };
@@ -236,6 +236,7 @@ avg.addEventListener("click", () => {
         const average = document.createElement("h1")
         document.body.appendChild(average);
         average.innerHTML = Math.round(averageViews);
+        console.log(averageViews)
     };
 
     calculateAverageViews(last_arr);
